@@ -27,17 +27,17 @@ print(par_impar(2))
 
 
 
-# FUnção 3
+# Função 3
 
-# def criar_pessoa(nome, idade, **informacoes):
-#     pessoa = {'nome': nome, 'idade': idade}
-#     pessoa.update(informacoes)
-#     return pessoa
+def criar_pessoa(nome, idade, **informacoes):
+    pessoa = {'nome': nome, 'idade': idade}
+    pessoa.update(informacoes)
+    return pessoa
 
-# # Uso
-# pessoa = criar_pessoa("Ana", 30, cidade="São Paulo", profissao="Engenheira")
-# print(pessoa)
-# # Saída: {'nome': 'Ana', 'idade': 30, 'cidade': 'São Paulo', 'profissao': 'Engenheira'}
+# Uso
+pessoa = criar_pessoa("Ana", 30, cidade="São Paulo", profissao="Engenheira")
+print(pessoa)
+# Saída: {'nome': 'Ana', 'idade': 30, 'cidade': 'São Paulo', 'profissao': 'Engenheira'}
 
 # Explicação:
 
