@@ -1,42 +1,59 @@
 # Função 1 (nível básico)
 # Aqui vamos somar dois números
 
-def soma(a, b):
-    return a + b
+# def soma(a, b):
+#     return a + b
 
-# Aplicação: A função recebe dois parâmetros. Retorna a soma deles.
+# # Aplicação: A função recebe dois parâmetros. Retorna a soma deles.
 
-resultado = soma(3, 5)
-print(resultado)
+# resultado = soma(3, 5)
+# print(resultado)
 
-# Função 2 (nível médio)
-# Aqui vamos verificar se o número é par ou ímpar
+# # Função 2 (nível médio)
+# # Aqui vamos verificar se o número é par ou ímpar
 
-def par_impar(numero):
-    if numero % 2 == 0:
-        return "Par"
-    else:
-        return "Ímpar"
+# def par_impar(numero):
+#     if numero % 2 == 0:
+#         return "Par"
+#     else:
+#         return "Ímpar"
     
-# Aplicação: Operção de módulo %. Verifica se é divisível por 2.
+# # Aplicação: Operção de módulo %. Verifica se é divisível por 2.
 
-print(par_impar(3))
-print(par_impar(2))
+# print(par_impar(3))
+# print(par_impar(2))
 
 
+
+# Nova função
+
+def cadastro_pessoa(nome, idade, **informacoes):
+    pessoa = {'nome': nome, 'idade': idade}
+    pessoa.update(informacoes)
+    return pessoa
+
+nome = input('Digite o nome: ')
+idade = int(input('Digite a idade: '))
+cidade = input('Digite a cidade: ')
+estado = input('Digite o estado: ')
+prof = input('Digite a profissão: ')
+est_c = input('Digite o estado civil: ')
+
+pessoa = cadastro_pessoa(nome, idade, cidade=cidade, estado=estado, profissao=prof, estado_civil=est_c)
+print(pessoa)
 
 
 
 # Função 3
 
-def criar_pessoa(nome, idade, **informacoes):
-    pessoa = {'nome': nome, 'idade': idade}
-    pessoa.update(informacoes)
-    return pessoa
+# def criar_pessoa(nome, idade, **informacoes):
+#     pessoa = {'nome': nome, 'idade': idade}
+#     pessoa.update(informacoes)
+#     return pessoa
 
-# Uso
-pessoa = criar_pessoa("Ana", 30, cidade="São Paulo", profissao="Engenheira")
-print(pessoa)
+# # Uso
+# pessoa = criar_pessoa("Ana", 30, cidade="São Paulo", profissao="Engenheira")
+# print(pessoa)
 # Saída: {'nome': 'Ana', 'idade': 30, 'cidade': 'São Paulo', 'profissao': 'Engenheira'}
 
 # Explicação:
