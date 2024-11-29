@@ -27,20 +27,42 @@
 
 # Nova função
 
-def cadastro_pessoa(nome, idade, **informacoes):
-    pessoa = {'nome': nome, 'idade': idade}
-    pessoa.update(informacoes)
+# def cadastro_pessoa(nome, idade, **informacoes):
+#     pessoa = {'nome': nome, 'idade': idade}
+#     pessoa.update(informacoes)
+#     return pessoa
+
+# nome = input('Digite o nome: ')
+# idade = int(input('Digite a idade: '))
+# cidade = input('Digite a cidade: ')
+# estado = input('Digite o estado: ')
+# prof = input('Digite a profissão: ')
+# est_c = input('Digite o estado civil: ')
+
+# pessoa = cadastro_pessoa(nome, idade, cidade=cidade, estado=estado, profissao=prof, estado_civil=est_c)
+# print(pessoa)
+
+
+# Função de cadastro
+
+def cadastro_p(nome, **infos):
+    pessoa = {'nome': nome}
+    pessoa.update(infos)
     return pessoa
 
 nome = input('Digite o nome: ')
 idade = int(input('Digite a idade: '))
-cidade = input('Digite a cidade: ')
-estado = input('Digite o estado: ')
-prof = input('Digite a profissão: ')
-est_c = input('Digite o estado civil: ')
+profissao = input('Digite a profissão: ')
 
-pessoa = cadastro_pessoa(nome, idade, cidade=cidade, estado=estado, profissao=prof, estado_civil=est_c)
+pessoa = cadastro_p(nome = nome, idade = idade, profissao = profissao)
 print(pessoa)
+
+
+
+
+
+
+
 
 
 
