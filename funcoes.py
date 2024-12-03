@@ -45,17 +45,17 @@
 
 # Função de cadastro
 
-def cadastro_p(nome, **infos):
-    pessoa = {'nome': nome}
-    pessoa.update(infos)
-    return pessoa
+# def cadastro_p(nome, **infos):
+#     pessoa = {'nome': nome}
+#     pessoa.update(infos)
+#     return pessoa
 
-nome = input('Digite o nome: ')
-idade = int(input('Digite a idade: '))
-profissao = input('Digite a profissão: ')
+# nome = input('Digite o nome: ')
+# idade = int(input('Digite a idade: '))
+# profissao = input('Digite a profissão: ')
 
-pessoa = cadastro_p(nome = nome, idade = idade, profissao = profissao)
-print(pessoa)
+# pessoa = cadastro_p(nome = nome, idade = idade, profissao = profissao)
+# print(pessoa)
 
 
 
@@ -113,7 +113,19 @@ print(pessoa)
 # No Django, você usará algo semelhante para validar e salvar dados de formulários.
 
 
+def calcular_desconto(preco, percentual):
+    return preco - (preco * percentual / 100)
 
+def total_com_desconto(preco, percentual, qtde):
+    preco_cheio = preco * qtde
+    total = calcular_desconto(preco_cheio, percentual)
+    return total
+
+preco = float(input('Digite o preço: '))
+qtde = float(input('Digite a quantidade de produtos: '))
+percentual = float(input('Digite o percentual de desconto: '))
+
+print(f'O preço de {qtde} unidades com desconto é {total_com_desconto(preco, percentual, qtde)}')
 
 
 # Função 5
